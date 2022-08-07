@@ -18,8 +18,8 @@ public class Task2 {
                 sequence[i] = Parser.tryParseDouble(scanner, itemName);
             }
             double z = Parser.tryParseDouble(scanner, "Z");
-            System.out.println("Replaced "
-                    + replaceAllMembersLargerThanGiven(sequence, z) + " members");
+            System.out.println(replaceAllMembersLargerThanGiven(sequence, z)
+                    + " members replaced.");
         }
     }
 
