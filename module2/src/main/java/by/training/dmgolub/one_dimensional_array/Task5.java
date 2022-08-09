@@ -13,7 +13,8 @@ public class Task5 {
             int n = Parser.tryParseInt(scanner, "sequence A size (N)");
             int[] array = new int[n];
             for (int i = 0; i < n; ++i) {
-                array[i] = Parser.tryParseInt(scanner, "a[i]");
+                String variableName = "a[" + i + "]";
+                array[i] = Parser.tryParseInt(scanner, variableName);
             }
             printElementsGreaterThanIndex(array);
         }
