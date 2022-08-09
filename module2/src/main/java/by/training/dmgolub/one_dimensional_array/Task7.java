@@ -14,7 +14,7 @@ public class Task7 {
             double[] array = new double[n];
             for (int i = 0; i < n; ++i) {
                 String variableName = "sequence[" + i + "]";
-                array[i] = Parser.tryParseInt(scanner, variableName);
+                array[i] = Parser.tryParseDouble(scanner, variableName);
             }
             System.out.println("Max of (a[1] + a[2N], a[2] + a[2N-1], " +
                     "..., a[N] + a[N+1]) = " + findMaxOfPairs(array));

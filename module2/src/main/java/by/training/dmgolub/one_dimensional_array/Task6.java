@@ -14,7 +14,7 @@ public class Task6 {
             double[] array = new double[n];
             for (int i = 0; i < n; ++i) {
                 String variableName = "array[" + i + "]";
-                array[i] = Parser.tryParseInt(scanner, variableName);
+                array[i] = Parser.tryParseDouble(scanner, variableName);
             }
             System.out.println("Sum of elements with prime indexes = "
                     + sumOfElementsWithPrimeIndexes(array));
