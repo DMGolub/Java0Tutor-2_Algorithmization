@@ -11,7 +11,11 @@ public class Task3 {
 
     public static void main(String[] args) {
         try (Scanner scanner = new Scanner(System.in)) {
-            int n = Parser.tryParseInt(scanner, "array size (N)");
+            int n = Parser.tryParseInt(scanner, "array length (N)");
+            while (n < 1) {
+                System.out.println("Array length must be greater than 0. Please try again.");
+                n = Parser.tryParseInt(scanner, "array length (N)");
+            }
             double[] array = new double[n];
             for (int i = 0; i < n; ++i) {
                 String itemName = "array[" + i + "]";

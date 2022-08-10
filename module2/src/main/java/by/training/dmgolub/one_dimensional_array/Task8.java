@@ -11,7 +11,11 @@ public class Task8 {
 
     public static void main(String[] args) {
         try (Scanner scanner = new Scanner(System.in)) {
-            int n = Parser.tryParseInt(scanner, "sequence size (N)");
+            int n = Parser.tryParseInt(scanner, "sequence length (N)");
+            while (n < 1) {
+                System.out.println("Sequence length must be greater than 0. Please try again.");
+                n = Parser.tryParseInt(scanner, "sequence length (N)");
+            }
             int[] array = new int[n];
             for (int i = 0; i < n; ++i) {
                 String variableName = "sequence[" + i + "]";
