@@ -10,7 +10,6 @@ import java.util.Scanner;
 public class Task7 {
 
     public static void main(String[] args) {
-
         try (Scanner scanner = new Scanner(System.in)) {
             int n = Parser.tryParseInt(scanner, "matrix size");
             while (n < 1) {
