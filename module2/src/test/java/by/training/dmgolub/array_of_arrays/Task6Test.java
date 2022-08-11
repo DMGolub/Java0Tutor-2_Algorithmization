@@ -17,7 +17,7 @@ class Task6Test {
 
     @Test
     public void fillMatrix_shouldThrowIllegalArgumentException_whenMatrixSizeIsOdd() {
-        int[][] matrix = new int[3][3];
+        Integer[][] matrix = new Integer[3][3];
 
         assertThrows(IllegalArgumentException.class,
                 () -> Task6.fillMatrix(matrix));
@@ -35,7 +35,7 @@ class Task6Test {
                 {0, 1, 1, 1, 1, 0},
                 {1, 1, 1, 1, 1, 1}
         };
-        int[][] matrix = new int[6][6];
+        Integer[][] matrix = new Integer[6][6];
 
         Task6.fillMatrix(matrix);
 

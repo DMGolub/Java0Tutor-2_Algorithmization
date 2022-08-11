@@ -20,7 +20,7 @@ class Task4Test {
         ByteArrayOutputStream out = new ByteArrayOutputStream();
         System.setOut(new PrintStream(out));
         String expected = "1 2\n3 4";
-        int[][] matrix = {
+        Integer[][] matrix = {
                 {1, 2},
                 {3, 4}
         };
@@ -38,7 +38,7 @@ class Task4Test {
 
     @Test
     public void fillMatrix_shouldThrowIllegalArgumentException_whenMatrixSizeIsOdd() {
-        int[][] matrix = new int[3][3];
+        Integer[][] matrix = new Integer[3][3];
 
         assertThrows(IllegalArgumentException.class,
                 () -> Task4.fillMatrix(matrix));
@@ -48,13 +48,13 @@ class Task4Test {
     public void fillMatrix_shouldFillTheMatrix_whenMatrixSizeIsEven() {
         ByteArrayOutputStream out = new ByteArrayOutputStream();
         System.setOut(new PrintStream(out));
-        int[][] expected = {
+        Integer[][] expected = {
                 {1, 2, 3, 4},
                 {4, 3, 2, 1},
                 {1, 2, 3, 4},
                 {4, 3, 2, 1},
         };
-        int[][] matrix = new int[4][4];
+        Integer[][] matrix = new Integer[4][4];
 
         Task4.fillMatrix(matrix);
 

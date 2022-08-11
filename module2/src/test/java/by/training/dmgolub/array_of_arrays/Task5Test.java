@@ -17,7 +17,7 @@ class Task5Test {
 
     @Test
     public void fillMatrix_shouldThrowIllegalArgumentException_whenMatrixSizeIsOdd() {
-        int[][] matrix = new int[3][3];
+        Integer[][] matrix = new Integer[3][3];
 
         assertThrows(IllegalArgumentException.class,
                 () -> Task5.fillMatrix(matrix));
@@ -27,13 +27,13 @@ class Task5Test {
     public void fillMatrix_shouldFillTheMatrix_whenMatrixSizeIsEven() {
         ByteArrayOutputStream out = new ByteArrayOutputStream();
         System.setOut(new PrintStream(out));
-        int[][] expected = {
+        Integer[][] expected = {
                 {1, 1, 1, 1},
                 {2, 2, 2, 0},
                 {3, 3, 0, 0},
                 {4, 0, 0, 0}
         };
-        int[][] matrix = new int[4][4];
+        Integer[][] matrix = new Integer[4][4];
 
         Task5.fillMatrix(matrix);
 

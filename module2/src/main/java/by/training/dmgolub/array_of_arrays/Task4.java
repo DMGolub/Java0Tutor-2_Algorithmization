@@ -19,7 +19,7 @@ public class Task4 {
                 System.out.println("Matrix size must be greater than 1 and even");
                 n = Parser.tryParseInt(scanner, "matrix size");
             }
-            int[][] matrix = new int[n][n];
+            Integer[][] matrix = new Integer[n][n];
             fillMatrix(matrix);
             printMatrix(matrix);
         }
@@ -36,7 +36,7 @@ public class Task4 {
      * @throws IllegalArgumentException when matrix is null or matrix size is odd.
      * @author DMGolub
      */
-    public static void fillMatrix(int[][] matrix) {
+    public static void fillMatrix(Integer[][] matrix) {
         if (matrix == null) {
             throw new IllegalArgumentException("Matrix can not be null");
         }
@@ -56,11 +56,11 @@ public class Task4 {
 
     /**
      * Prints the given matrix;
-     * @param matrix integer matrix.
+     * @param matrix <T> matrix.
      * @throws IllegalArgumentException if matrix is null.
      * @author DMGolub
      */
-    public static void printMatrix(int[][] matrix) {
+    public static <T> void printMatrix(T[][] matrix) {
         if (matrix == null) {
             throw new IllegalArgumentException("Matrix can not be null");
         }
