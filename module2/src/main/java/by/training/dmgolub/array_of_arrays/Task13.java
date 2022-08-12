@@ -1,5 +1,7 @@
 package by.training.dmgolub.array_of_arrays;
 
+/*  Отсортировать столбцы матрицы по возрастанию
+    и убыванию значений элементов.           */
 public class Task13 {
 
     public static void main(String[] args) {
