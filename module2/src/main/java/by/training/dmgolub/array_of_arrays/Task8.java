@@ -48,6 +48,15 @@ public class Task8 {
         }
     }
 
+    /**
+     * Parses matrix size with provided name from console.
+     * Checks if the size is greater or equal to the given threshold.
+     * @param sizeName String matrix size name,
+     * @param minSize integer minimum size value,
+     * @param scanner Scanner.
+     * @return matrix size.
+     * @author DMGolub
+     */
     private static int parseMatrixSize(String sizeName, int minSize, Scanner scanner) {
         int size = Parser.tryParseInt(scanner, "matrix size " + sizeName);
         while (size < minSize) {
