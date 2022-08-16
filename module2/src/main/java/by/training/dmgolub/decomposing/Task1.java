@@ -21,7 +21,7 @@ public class Task1 {
     }
 
     /**
-     * Calculates greatest common divisor of two given numbers.
+     * Calculates the greatest common divisor of two given numbers.
      * @param a int first number,
      * @param b int second number.
      * @return greatest common divisor.
@@ -39,7 +39,7 @@ public class Task1 {
     }
 
     /**
-     * Calculates smallest common multiple of two given numbers.
+     * Calculates the smallest common multiple of two given numbers.
      * @param a int first number,
      * @param b int second number.
      * @return greatest common divisor.
