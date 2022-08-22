@@ -27,14 +27,6 @@ public class Task16 {
             System.out.println("Magic square:");
             Task4.printMatrix(magicSquare);
 
-            long a = Long.remainderUnsigned(-2,3);
-            int b = Integer.remainderUnsigned(-2,3);
-            int c = -2%3;
-            System.out.print(a + " " + b + " " + c);
-
-            int value = 0;
-            value = value > 0 ? ++value : --value;
-            System.out.println("value = " + value);
         }
      }
 

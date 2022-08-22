@@ -22,14 +22,18 @@ public class Task5 {
                 numbers[i] = Parser.tryParseInt(scanner, variableName);
             }
             int secondMaximum = findSecondMaximum(numbers);
-            System.out.println(secondMaximum);
+            if (secondMaximum == Integer.MAX_VALUE) {
+                System.out.println("Could not find second maximum.");
+            } else {
+                System.out.println(secondMaximum);
+            }
         }
     }
 
     /**
      * Finds second maximum in the given array.
      * @param numbers integer array.
-     * @return second maximum or Integer.MIN_VALUE if it can not be found.
+     * @return second maximum or Integer.MAX_VALUE if it can not be found.
      * @throws IllegalArgumentException when array of numbers is null.
      * @author DMGolub
      */
@@ -39,14 +43,16 @@ public class Task5 {
         }
         int maximum = Integer.MIN_VALUE;
         int secondMaximum = Integer.MIN_VALUE;
+        boolean isFound = false;
         for (int number : numbers) {
             if (number > maximum) {
                 secondMaximum = maximum;
                 maximum = number;
+                isFound = true;
             } else if (number != maximum && number > secondMaximum) {
                 secondMaximum = number;
             }
         }
-        return secondMaximum;
+        return isFound ? secondMaximum : Integer.MAX_VALUE;
     }
 }
