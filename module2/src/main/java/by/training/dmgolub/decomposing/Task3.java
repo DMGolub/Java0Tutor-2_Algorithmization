@@ -13,8 +13,8 @@ public class Task3 {
         try (Scanner scanner = new Scanner(System.in)) {
             double a = Parser.tryParseDouble(scanner, "a");
             while (a < 0) {
-                System.out.println("Hexagon side size can not"
-                        + " be negative. Please try again");
+                System.out.println("Hexagon side size can not "
+                        + "be negative. Please try again");
                 a = Parser.tryParseDouble(scanner, "a");
             }
             System.out.println("Hexagon area = " + calculateRegularHexagonArea(a));
