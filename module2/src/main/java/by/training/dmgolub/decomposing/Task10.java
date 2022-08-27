@@ -27,7 +27,7 @@ public class Task10 {
      * @throws IllegalArgumentException when the number is less than 1.
      * @author DMGolub
      */
-    private static int[] splitNumber(int number) {
+    public static int[] splitNumber(int number) {
         if (number < 1) {
             throw new IllegalArgumentException("Number can not be less than 1");
         }
@@ -46,7 +46,7 @@ public class Task10 {
      * @throws IllegalArgumentException when array is null.
      * @author DMGolub
      */
-    private static void printArray(int[] array) {
+    public static void printArray(int[] array) {
         if (array == null) {
             throw new IllegalArgumentException("Array can not be null");
         }
