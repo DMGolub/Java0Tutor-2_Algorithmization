@@ -25,22 +25,22 @@ public class Task13 {
 
     /**
      * Prints all the prime twins found in the given range of natural numbers.
-     * @param fromIndex integer first index of the range,
-     * @param toIndex integer last index of the range.
-     * @throws IllegalArgumentException when any of indexes is negative.
+     * @param fromNumber integer first number of the range,
+     * @param toNumber integer last number of the range.
+     * @throws IllegalArgumentException when any of bounds is negative.
      * @author DMGolub
      */
-    public static void printPrimeTwins(int fromIndex, int toIndex) {
-        if (fromIndex < 0 || toIndex < 0) {
-            throw new IllegalArgumentException("Index can not be negative");
+    public static void printPrimeTwins(int fromNumber, int toNumber) {
+        if (fromNumber < 0 || toNumber < 0) {
+            throw new IllegalArgumentException("Bound can not be negative");
         }
-        if (fromIndex > toIndex) {
-            int temp = fromIndex;
-            fromIndex = toIndex;
-            toIndex = temp;
+        if (fromNumber > toNumber) {
+            int temp = fromNumber;
+            fromNumber = toNumber;
+            toNumber = temp;
         }
         int counter = 0;
-        for (int i = fromIndex; i <= toIndex - 2; i++) {
+        for (int i = fromNumber; i <= toNumber - 2; i++) {
             if (isPrimeNumber(i) && isPrimeNumber(i + 2)) {
                 System.out.println(i + ", " + (i + 2));
                 counter++;
